@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav Fashion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-content">
+                <span class="loader-text">VAIBHAV</span>
+                <span class="loader-text-small">FASHION</span>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                    <div class="progress-text">0%</div>
+                </div>
+            </div>
+            <div class="loader-particles"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">VAIBHAV FASHION</div>
+        <button class="mobile-nav-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content">
+                <h1>Elegance Woven in Tradition,<br>Crafted for You</h1>
+                <p>Luxury Wedding Attire</p>
+            </div>
+        </section>
+
+        <!-- Collections -->
+        <section id="collections" class="collections">
+            <h2>Our Collections</h2>
+            <div class="collection-grid">
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <div class="image-container" data-scroll data-scroll-speed="1">
+                            <img src="assets/images/white-shervani-men.png" alt="Men's Collection">
+                        </div>
+                    </div>
+                    <h3>Men's Collection</h3>
+                </div>
+                
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <div class="image-container" data-scroll data-scroll-speed="1">
+                            <img src="assets/images/brides-saree.png" alt="Bridal Collection">
+                        </div>
+                    </div>
+                    <h3>Bridal Collection</h3>
+                </div>
+                
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <div class="image-container" data-scroll data-scroll-speed="1">
+                            <img src="assets/images/wedding-attire.png" alt="Indo-Western">
+                        </div>
+                    </div>
+                    <h3>Indo-Western</h3>
+                </div>
+                
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <div class="image-container" data-scroll data-scroll-speed="1">
+                            <img src="assets/images/bride-saree-2.png" alt="Traditionals">
+                        </div>
+                    </div>
+                    <h3>Traditionals</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Vaibhav Fashion has been crafting exceptional wedding attire since 2010. Our dedication to quality and attention to detail has made us a preferred choice for couples seeking perfection on their special day.</p>
+            </div>
+            <div class="about-3d">
+                <canvas id="about-canvas"></canvas>
+            </div>
+        </section>
+
+        <!-- Happy Clients -->
+        <section id="clients" class="clients">
+            <h2>Happy Clients</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p class="review">"Our wedding attire from Vaibhav Fashion was absolutely stunning. The attention to detail and craftsmanship exceeded our expectations. The team made the entire process so special."</p>
+                        <h4 class="client-name">Priya & Rahul</h4>
+                        <p class="wedding-date">December 2023</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p class="review">"The Indo-Western collection is a perfect blend of tradition and modernity. We received countless compliments on our outfits. Thank you for making our day memorable!"</p>
+                        <h4 class="client-name">Anita & Vikram</h4>
+                        <p class="wedding-date">March 2024</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p class="review">"Exceptional service and stunning designs. The customization options helped us create exactly what we envisioned. The final outfits were pure perfection!"</p>
+                        <h4 class="client-name">Maya & Arjun</h4>
+                        <p class="wedding-date">February 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Visit Us</h2>
+                <div class="contact-details">
+                    <div class="address">
+                        <h3>Location</h3>
+                        <p>123 Fashion Street, Luxury Lane</p>
+                        <p>Mumbai, Maharashtra 400001</p>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <textarea placeholder="Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="map-3d" class="map-container">
+                <canvas id="map-canvas"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h3>VAIBHAV</h3>
+                    <span>FASHION</span>
+                </div>
+                <div class="footer-contact">
+                    <h4>Visit Us</h4>
+                    <p>123 Fashion Street, Luxury Lane</p>
+                    <p>Mumbai, Maharashtra 400001</p>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div class="footer-hours">
+                    <h4>Store Hours</h4>
+                    <p>Monday - Saturday</p>
+                    <p>11:00 AM - 8:00 PM</p>
+                    <p>Sunday: By Appointment</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">
+                            <img src="assets/icons/instagram.svg" alt="Instagram" class="social-icon">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <img src="assets/icons/facebook.svg" alt="Facebook" class="social-icon">
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <img src="assets/icons/pinterest.svg" alt="Pinterest" class="social-icon">
+                            <span>Pinterest</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Vaibhav Fashion. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-pattern"></div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
